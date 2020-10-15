@@ -1,0 +1,54 @@
+{
+  "1": {
+    "cli_commands": [
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.1.0/24 => 1",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.2.0/24 => 2",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action_ecmp 10.0.3.0/24 => 2 2 2",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.4.0/24 => 3",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 1 => CA:FE:BA:BE:00:01",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 2 => CA:FE:BA:BE:99:02",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 3 => CA:FE:BA:BE:99:04",
+      "table_set_default MyEgress.source_mac_update_table MyEgress.update_source_mac_action CA:FE:BA:BE:99:01"
+    ],
+    "p4program": ""
+  },
+  "2": {
+    "cli_commands": [
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.1.0/24 => 2",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.2.0/24 => 1",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.3.0/24 => 3",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action_ecmp 10.0.4.0/24 => 2 2 3",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 1 => CA:FE:BA:BE:00:02",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 2 => CA:FE:BA:BE:99:01",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 3 => CA:FE:BA:BE:99:03",
+      "table_set_default MyEgress.source_mac_update_table MyEgress.update_source_mac_action CA:FE:BA:BE:99:02"
+    ],
+    "p4program": ""
+  },
+  "3": {
+    "cli_commands": [
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action_ecmp 10.0.1.0/24 => 2 2 3",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.2.0/24 => 2",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.3.0/24 => 1",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.4.0/24 => 3",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 1 => CA:FE:BA:BE:00:03",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 2 => CA:FE:BA:BE:99:02",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 3 => CA:FE:BA:BE:99:04",
+      "table_set_default MyEgress.source_mac_update_table MyEgress.update_source_mac_action CA:FE:BA:BE:99:03"
+    ],
+    "p4program": ""
+  },
+  "4": {
+    "cli_commands": [
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.1.0/24 => 3",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action_ecmp 10.0.2.0/24 => 2 2 3",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.3.0/24 => 2",
+      "table_add MyIngress.ecmp_table MyIngress.to_port_action 10.0.4.0/24 => 1",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 1 => CA:FE:BA:BE:00:04",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 2 => CA:FE:BA:BE:99:03",
+      "table_add MyIngress.nexthop_mac_update_table MyIngress.update_nexthop_mac_action 3 => CA:FE:BA:BE:99:01",
+      "table_set_default MyEgress.source_mac_update_table MyEgress.update_source_mac_action CA:FE:BA:BE:99:04"
+    ],
+    "p4program": ""
+  }
+}

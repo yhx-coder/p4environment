@@ -1,0 +1,40 @@
+{
+	"host_links":
+	[
+		{
+			"host": 1,
+			"switch": 1
+		},
+		{
+			"host": 2,
+			"switch": 2
+		},
+		{
+			"host": 3,
+			"switch": 3
+		},
+		{
+			"host": 4,
+			"switch": 4
+		}
+	],
+	"switch_links":
+	[
+		{
+			"switch1": 1,
+			"switch2": 2
+		},
+		{
+			"switch1": 2,
+			"switch2": 3
+		},
+		{
+			"switch1": 3,
+			"switch2": 4
+		},
+		{
+			"switch1": 4,
+			"switch2": 1
+		}
+	]
+}

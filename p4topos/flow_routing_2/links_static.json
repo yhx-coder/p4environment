@@ -1,0 +1,154 @@
+{
+	"host_links":
+	[
+		{
+			"host": 1, 
+			"switch": 1,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		}, 
+		{
+			"host": 2,
+			"switch": 2,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 3,
+			"switch": 3,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 4,
+			"switch": 4,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 5,
+			"switch": 5,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 6,
+			"switch": 6,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 7,
+			"switch": 7,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		}
+	],
+	"switch_links":
+	[
+		{
+			"switch1": 1,
+			"switch1_port": 2,
+			"switch2": 2,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 1,
+			"switch1_port": 3,
+			"switch2": 3,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 1,
+			"switch1_port": 4,
+			"switch2": 4,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 1,
+			"switch1_port": 5,
+			"switch2": 5,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 1,
+			"switch1_port": 6,
+			"switch2": 6,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 7,
+			"switch1_port": 2,
+			"switch2": 2,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 7,
+			"switch1_port": 3,
+			"switch2": 3,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 7,
+			"switch1_port": 4,
+			"switch2": 4,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 7,
+			"switch1_port": 5,
+			"switch2": 5,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 7,
+			"switch1_port": 6,
+			"switch2": 6,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		}
+	]
+}

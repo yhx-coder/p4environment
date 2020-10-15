@@ -1,0 +1,14 @@
+*.pdf
+*.log
+*.log.txt
+*.pcap
+*.pyc
+*.csv
+*.txt
+*.txt.pkl
+*.pkl.gz
+*.npy
+*.npy.gz
+*.yaml
+.idea/
+topology.json

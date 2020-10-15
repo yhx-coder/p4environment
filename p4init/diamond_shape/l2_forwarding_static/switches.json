@@ -1,0 +1,38 @@
+{
+  "1": {
+    "cli_commands": [
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:01 => 1",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:02 => 2",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:03 => 2",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:04 => 3"
+    ],
+    "p4program": ""
+  },
+  "2": {
+    "cli_commands": [
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:01 => 2",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:02 => 1",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:03 => 3",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:04 => 3"
+    ],
+    "p4program": ""
+  },
+  "3": {
+    "cli_commands": [
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:01 => 3",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:02 => 2",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:03 => 1",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:04 => 3"
+    ],
+    "p4program": ""
+  },
+  "4": {
+    "cli_commands": [
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:01 => 3",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:02 => 3",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:03 => 2",
+      "table_add MyIngress.ethernet_match_table MyIngress.to_port_action ca:fe:ba:be:00:04 => 1"
+    ],
+    "p4program": ""
+  }
+}

@@ -1,0 +1,85 @@
+{
+    "bmv2_json": "p4programs/l3_forwarding_static/p4build/l3_forwarding_static.json",
+    "target": "bmv2",
+    "p4info": "p4programs/l3_forwarding_static/p4build/l3_forwarding_static.p4info.txt",
+    "table_entries": [
+    {
+      "table": "MyIngress.ipv4_match_table",
+      "match": {
+        "hdr.ipv4.dst_addr": ["10.0.1.0", 24]
+      },
+      "action_name": "MyIngress.to_port_action",
+      "action_params": {
+        "port": 2
+      }
+    },
+    {
+      "table": "MyIngress.ipv4_match_table",
+      "match": {
+        "hdr.ipv4.dst_addr": ["10.0.2.0", 24]
+      },
+      "action_name": "MyIngress.to_port_action",
+      "action_params": {
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.ipv4_match_table",
+      "match": {
+        "hdr.ipv4.dst_addr": ["10.0.3.0", 24]
+      },
+      "action_name": "MyIngress.to_port_action",
+      "action_params": {
+        "port": 3
+      }
+    },
+    {
+      "table": "MyIngress.ipv4_match_table",
+      "match": {
+        "hdr.ipv4.dst_addr": ["10.0.4.0", 24]
+      },
+      "action_name": "MyIngress.to_port_action",
+      "action_params": {
+        "port": 3
+      }
+    },
+    {
+      "table": "MyIngress.nexthop_mac_update_table",
+      "match": {
+        "standard_metadata.egress_spec": 1
+      },
+      "action_name": "MyIngress.update_nexthop_mac_action",
+      "action_params": {
+        "nexthop_mac": "CA:FE:BA:BE:00:02"
+      }
+    },
+    {
+      "table": "MyIngress.nexthop_mac_update_table",
+      "match": {
+        "standard_metadata.egress_spec": 2
+      },
+      "action_name": "MyIngress.update_nexthop_mac_action",
+      "action_params": {
+        "nexthop_mac": "CA:FE:BA:BE:99:01"
+      }
+    },
+    {
+      "table": "MyIngress.nexthop_mac_update_table",
+      "match": {
+        "standard_metadata.egress_spec": 3
+      },
+      "action_name": "MyIngress.update_nexthop_mac_action",
+      "action_params": {
+        "nexthop_mac": "CA:FE:BA:BE:99:03"
+      }
+    },
+    {
+      "table": "MyEgress.source_mac_update_table",
+      "default_action": true,
+      "action_name": "MyEgress.update_source_mac_action",
+      "action_params": {
+        "source_mac": "CA:FE:BA:BE:99:02"
+      }
+    }
+    ]
+}

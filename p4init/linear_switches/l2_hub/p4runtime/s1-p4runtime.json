@@ -1,0 +1,6 @@
+{
+    "bmv2_json": "p4programs/l2_hub/p4build/l2_hub.json",
+    "target": "bmv2",
+    "p4info": "p4programs/l2_hub/p4build/l2_hub.p4info.txt",
+    "table_entries": [ ]
+}

@@ -1,0 +1,222 @@
+{
+	"host_links":
+	[
+		{
+			"host": 1, 
+			"switch": 1,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		}, 
+		{
+			"host": 2,
+			"switch": 2,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 3,
+			"switch": 3,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 4,
+			"switch": 4,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 5,
+			"switch": 5,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 6,
+			"switch": 6,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 7,
+			"switch": 7,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 8,
+			"switch": 8,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 9,
+			"switch": 9,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 10,
+			"switch": 10,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 11,
+			"switch": 11,
+			"switch_port": 1,
+			"bw": 10,
+			"delay": 0,
+			"loss": 0
+		}
+	],
+	"switch_links":
+	[
+		{
+			"switch1": 1,
+			"switch1_port": 2,
+			"switch2": 2,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 1,
+			"switch1_port": 3,
+			"switch2": 3,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 1,
+			"switch1_port": 4,
+			"switch2": 5,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 1,
+			"switch1_port": 5,
+			"switch2": 7,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 1,
+			"switch1_port": 6,
+			"switch2": 9,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 3,
+			"switch1_port": 3,
+			"switch2": 4,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 5,
+			"switch1_port": 3,
+			"switch2": 6,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 7,
+			"switch1_port": 3,
+			"switch2": 8,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 9,
+			"switch1_port": 3,
+			"switch2": 10,
+			"switch2_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 11,
+			"switch1_port": 2,
+			"switch2": 2,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 11,
+			"switch1_port": 3,
+			"switch2": 4,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 11,
+			"switch1_port": 4,
+			"switch2": 6,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 11,
+			"switch1_port": 5,
+			"switch2": 8,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"switch1": 11,
+			"switch1_port": 6,
+			"switch2": 10,
+			"switch2_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		}
+	]
+}

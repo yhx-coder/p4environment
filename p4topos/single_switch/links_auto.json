@@ -1,0 +1,22 @@
+{
+	"host_links":
+	[
+		{
+			"host": 1,
+			"switch": 1
+		},
+		{
+			"host": 2,
+			"switch": 1
+		},
+		{
+			"host": 3,
+			"switch": 1
+		},
+		{
+			"host": 4,
+			"switch": 1
+		}
+	],
+	"switch_links": [ ]
+}

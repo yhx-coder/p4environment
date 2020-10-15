@@ -1,0 +1,64 @@
+{
+	"host_links":
+	[
+		{
+			"host": 1,
+			"switch": 1
+		},
+		{
+			"host": 2,
+			"switch": 2
+		},
+		{
+			"host": 3,
+			"switch": 3
+		},
+		{
+			"host": 4,
+			"switch": 4
+		},
+		{
+			"host": 5,
+			"switch": 5
+		},
+		{
+			"host": 6,
+			"switch": 6
+		}
+	],
+	"switch_links":
+	[
+		{
+			"switch1": 1,
+			"switch2": 2
+		},
+		{
+			"switch1": 1,
+			"switch2": 3
+		},
+		{
+			"switch1": 1,
+			"switch2": 4
+		},
+		{
+			"switch1": 1,
+			"switch2": 5
+		},
+		{
+			"switch1": 6,
+			"switch2": 2
+		},
+		{
+			"switch1": 6,
+			"switch2": 3
+		},
+		{
+			"switch1": 6,
+			"switch2": 4
+		},
+		{
+			"switch1": 6,
+			"switch2": 5
+		}
+	]
+}

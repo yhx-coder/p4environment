@@ -1,0 +1,6 @@
+{
+    "bmv2_json": "p4programs/l2_learn_cpu/p4build/l2_learn_cpu.json",
+    "target": "bmv2",
+    "p4info": "p4programs/l2_learn_cpu/p4build/l2_learn_cpu.p4info.txt",
+    "table_entries": [ ]
+}

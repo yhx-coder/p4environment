@@ -1,0 +1,38 @@
+{
+	"host_links":
+	[
+		{
+			"host": 1, 
+			"switch": 1,
+			"switch_port": 1,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		}, 
+		{
+			"host": 2,
+			"switch": 1,
+			"switch_port": 2,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 3,
+			"switch": 1,
+			"switch_port": 3,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		},
+		{
+			"host": 4,
+			"switch": 1,
+			"switch_port": 4,
+			"bw": 1,
+			"delay": 0,
+			"loss": 0
+		}
+	],
+	"switch_links": [ ]
+}

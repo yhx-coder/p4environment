@@ -1,0 +1,6 @@
+{
+    "table_entries": [], 
+    "bmv2_json": "p4programs/flow_forwarding/p4build/flow_forwarding.json", 
+    "target": "bmv2", 
+    "p4info": "p4programs/flow_forwarding/p4build/flow_forwarding.p4info.txt"
+}

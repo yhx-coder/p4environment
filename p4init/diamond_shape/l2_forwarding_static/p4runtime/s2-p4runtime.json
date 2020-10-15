@@ -1,0 +1,47 @@
+{
+    "bmv2_json": "p4programs/l2_forwarding_static/p4build/l2_forwarding_static.json",
+    "target": "bmv2",
+    "p4info": "p4programs/l2_forwarding_static/p4build/l2_forwarding_static.p4info.txt",
+    "table_entries": [
+    {
+      "table": "MyIngress.ethernet_match_table",
+      "match": {
+        "hdr.ethernet.dst_addr": "ca:fe:ba:be:00:01"
+      },
+      "action_name": "MyIngress.to_port_action",
+      "action_params": {
+        "port": 2
+      }
+    },
+    {
+      "table": "MyIngress.ethernet_match_table",
+      "match": {
+        "hdr.ethernet.dst_addr": "ca:fe:ba:be:00:02"
+      },
+      "action_name": "MyIngress.to_port_action",
+      "action_params": {
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.ethernet_match_table",
+      "match": {
+        "hdr.ethernet.dst_addr": "ca:fe:ba:be:00:03"
+      },
+      "action_name": "MyIngress.to_port_action",
+      "action_params": {
+        "port": 3
+      }
+    },
+    {
+      "table": "MyIngress.ethernet_match_table",
+      "match": {
+        "hdr.ethernet.dst_addr": "ca:fe:ba:be:00:04"
+      },
+      "action_name": "MyIngress.to_port_action",
+      "action_params": {
+        "port": 3
+      }
+    }
+    ]
+}
