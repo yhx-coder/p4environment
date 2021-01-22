@@ -50,7 +50,7 @@ class P4Connector(threading.Thread):
 
         p4switch_connection_grpc = None
         if sw_conf['class'] == 'P4RuntimeSwitch':  # runtimeAPI
-            sw_grpc_server_addr = '{}:{} '.format(sw_conf['mgmt_ip'], sw_conf['grpc_port'])
+            sw_grpc_server_addr = '{}:{}'.format(sw_conf['mgmt_ip'], sw_conf['grpc_port'])
             if sw not in self.p4switch_connections_gRPC:
                 p4switch_connection_grpc = switch.Bmv2SwitchConnection(switch_addr=sw_grpc_server_addr,
                                                                        device_id=sw_conf['device_id'],

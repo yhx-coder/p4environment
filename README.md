@@ -8,11 +8,25 @@ In general, a **P4 Controller** may implement functionalities of a **P4 Monitor*
 **NOTE (2):** If you are directly interested in aspects refering to our publication at [**CNSM 2020**](http://www.cnsm-conf.org/2020/index.html) please scroll to the [bottom of this page](#cnsm).
 
 ## Setup
-In order to install a fully functional P4 setup, we recommend the installation scripts provided at [jafingerhut/p4-guide](https://github.com/jafingerhut/p4-guide/tree/master/bin). 
+**P4Environment** code is expecting Python 2.7 as the supported runtime. In order to install a fully functional P4 setup, we recommend the installation scripts provided at [jafingerhut/p4-guide](https://github.com/jafingerhut/p4-guide/tree/master/bin). 
 Especially using [https://github.com/jafingerhut/p4-guide/blob/master/bin/install-p4dev-v2.sh](https://github.com/jafingerhut/p4-guide/blob/master/bin/install-p4dev-v2.sh) installs [mininet](https://github.com/mininet/mininet), [p4c](https://github.com/p4lang/p4c), [behavioral model](https://github.com/p4lang/behavioral-model) including P4 runtime capabilities (simple_switch, simple_switch_grpc) and required dependencies (e.g., [protobuf](https://github.com/protocolbuffers/protobuf), [gRPC](https://github.com/grpc/grpc) and [PI](https://github.com/p4lang/PI)) on a Ubuntu 18.04 system.
 You may also have a look at [https://github.com/jafingerhut/p4-guide/blob/master/bin/README-install-troubleshooting.md](https://github.com/jafingerhut/p4-guide/blob/master/bin/README-install-troubleshooting.md) for further details.
 
-**NOTE:** Right after running the above mentioned setup script(s) you should be able to clone and use **P4Environment** on your system.
+**NOTE (1):** 
+Right after running the above mentioned setup script(s) you should be able to clone and use **P4Environment** on your system.
+
+**NOTE (2):**
+The testbed, in which the experiments for [**CNSM 2020**](http://www.cnsm-conf.org/2020/index.html) were performed, is based on the following software versions (commits):
+- *install-p4dev-v2.sh*: 65a761cd0748e1f38fb98a70ddbc3d26626053b4
+- *p4c*: bf5d4bac9e78ae7405aca801fad6df97b123ab84
+- *behavioral-model*: 3b7b1ff13860aa7e2d8c08d18342aae928bd2a97
+- *PI*: 771d5c46106f14f33777e70f39df2ae772cdfe17
+- *gRPC*: c7cc34e2d76afe67528ac5b20c5ccbe0692757e8 (tags/v1.17.2)
+- *protobuf*: 48cb18e5c419ddd23d9badcfe4e9df7bde1979b2 (v3.6.1)
+- *mininet*: bfc42f6d028a9d5ac1bc121090ca4b3041829f86
+
+You might want to slightly adapt the mentioned setup script(s) to consider the above versions (checkout) in order to reproduce the experiments.
+
 
 ## Repository Structure
 - [*p4controllers*](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/tree/master/p4controllers): 
@@ -136,9 +150,9 @@ Besides the general concepts of **P4 Environment**, the following aspects refer 
 - **P4 Monitor**: [**Port Counter**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/p4monitors/p4port_counter.py)
 - **P4 Topologies**: [**flow_routing_1**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/tree/master/p4topos/flow_routing_1), [**flow_routing_2**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/tree/master/p4topos/flow_routing_2)
 - **Traffic Profiles**: [**Traffic Profile Generator**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/tools/traffic_profiles/traffic_profiles_generator.py), [**Traffic Profile Replay**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/p4topos/p4topo_traffic.py) 
-- **Experiments**: [**Experiment Generator**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/tools/experiments/experiments_generator.py), [**Experiment Runner**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/p4runner.py), [**Experiment Evaluator (Visualization)**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/tools/experiments/visualization/experiments_visualization.py), [**Experiment Evaluator (Time Measure)**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/tools/experiments/time_measure/experiments_time_measure.py) 
+- **Experiments**: [**Experiment Generator**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/tools/experiments/experiments_generator.py), [**Experiment Runner**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/exp_runner.py), [**Experiment Evaluator (Visualization)**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/tools/experiments/visualization/experiments_visualization.py), [**Experiment Evaluator (Time Measure)**](https://gitlab.cs.hs-fulda.de/flow-routing/cnsm2020/p4environment/-/blob/master/tools/experiments/time_measure/experiments_time_measure.py) 
 
-**NOTE:** The *Traffic Profile Generator* and the *Experiment Generator* output all required files and CLI commands to run and evaluate the experiments performed for [CNSM 2020](http://www.cnsm-conf.org/2020/index.html).
+**NOTE:** The *Traffic Profile Generator* and the *Experiment Generator* output all required files and CLI commands to run (cf. *Experiment Runner*) and evaluate the experiments performed for [CNSM 2020](http://www.cnsm-conf.org/2020/index.html).
 
 ## Contact
 Feel free to drop us an email regarding **P4Environment**:

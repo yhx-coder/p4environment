@@ -32,8 +32,6 @@ import os
 import psutil
 import tempfile
 from time import sleep
-import json
-import requests
 
 from tools.log.log import log
 
@@ -263,16 +261,6 @@ class P4Switch(Switch):
         log.info('# switch management addresses: ' + self.mgmt_ip + ' | ' + self.mgmt_mac)
         log.info('# start command: ' + self.start_cmd)
         log.info('#' * 15)
-
-    def register_controller(self, controller_address):
-        try:
-            response = requests.post(url='http://{}/node'.format(controller_address),
-                                     json=json.dumps(self.switch_config))
-            log.info('register switch config ({}): {}\n'.format(self.name, response))
-        except requests.exceptions.ConnectionError as ex:
-            log.warn(ex)
-            log.warn('unable to register switch config ({})\n'.format(self.name))
-            # raise P4ControllerRegisterException('unable to register switch config ({})\n'.format(self.name))
 
     def get_switch_config(self):
         return self.switch_config

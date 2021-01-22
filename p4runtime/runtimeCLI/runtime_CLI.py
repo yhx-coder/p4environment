@@ -35,7 +35,7 @@ import os
 import struct
 import json
 from functools import wraps
-import bmpy_utils as utils
+import bmpy_utils
 
 from bm_runtime.standard import Standard
 from bm_runtime.standard.ttypes import *
@@ -279,7 +279,7 @@ def reset_config():
 
 
 def load_json_config(standard_client=None, json_path=None):
-    load_json_str(utils.get_json_config(standard_client, json_path))
+    load_json_str(bmpy_utils.get_json_config(standard_client, json_path))
 
 
 def load_json_str(json_str):
@@ -694,7 +694,7 @@ def parse_pvs_value(input_str, bitwidth):
 
 # services is [(service_name, client_class), ...]
 def thrift_connect(thrift_ip, thrift_port, services):
-    return utils.thrift_connect(thrift_ip, thrift_port, services)
+    return bmpy_utils.thrift_connect(thrift_ip, thrift_port, services)
 
 
 def handle_bad_input(f):

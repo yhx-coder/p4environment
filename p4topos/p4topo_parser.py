@@ -133,10 +133,13 @@ class TopologyArgumentParser(object):
                                 help='measure elapsed times for flow forwarding controller operations', required=False)
 
         choices = None
-        if sys.argv[0] == 'p4runner.py':
-            choices = os.listdir('tools/traffic_profiles/profiles')
-        if sys.argv[0] == 'experiments_generator.py':
-            choices = os.listdir('../traffic_profiles/profiles')
+        try:
+            if sys.argv[0] == 'p4runner.py':
+                choices = [file_ for file_ in os.listdir('tools/traffic_profiles/profiles') if not file_.startswith('.')]
+            if sys.argv[0] == 'experiments_generator.py':
+                choices = [file_ for file_ in os.listdir('../traffic_profiles/profiles') if not file_.startswith('.')]
+        except:
+            pass
         parser.add_argument('--traffic_profile', type=str, default=None, choices=choices,
                             help='traffic profile that is applied to and replayed in the P4 topology', required=False)
 

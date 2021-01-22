@@ -14,6 +14,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import sys
+import os
+
+sys.path.append(os.path.join(os.pardir, os.pardir))
+
+if __name__ == '__main__':
+    ##########
+    from tools import modules_installation as minstall
+
+    for module_spec in minstall.python_modules:
+        minstall.install_python_module(python_module=module_spec[0], import_name=module_spec[1], version=module_spec[2])
+    ##########
+
 from p4topos.p4topo_parser import TopologyArgumentParser
 
 from itertools import product

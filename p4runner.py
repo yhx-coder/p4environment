@@ -26,6 +26,13 @@
 #############################################################################
 
 if __name__ == '__main__':
+    ##########
+    from tools import modules_installation as minstall
+
+    for module_spec in minstall.python_modules:
+        minstall.install_python_module(python_module=module_spec[0], import_name=module_spec[1], version=module_spec[2])
+    ##########
+
     import sys
     import os
 
@@ -82,9 +89,6 @@ class P4TopoRunner(object):
 
         log.info('initializing mininet...')
         net = Mininet(topo=topo, controller=None, autoStaticArp=True)
-        # net = Mininet(topo=self, controller=RemoteController('ONOS',
-        #                                                      ip=self.controller_ip,
-        #                                                      port=self.controller_port))
 
         log.info('starting mininet...')
         net.start()
@@ -123,13 +127,9 @@ class P4TopoRunner(object):
             p4monitor.set_p4controller(p4controller)
             p4controller.set_p4monitor(p4monitor)
 
-        # controller_addr = '{}:{}'.format(self.topology_json['controller_ip'], self.topology_json['controller_port'])
-
         log.info('configuring hosts...')
         host_mappings = []
         for host in [h for h in net.hosts if h.name != management_host]:
-            # host.register_controller(controller_addr)
-
             host.configure()
             host_config = host.get_host_config()
             p4monitor.add_node(host_config)
@@ -141,8 +141,6 @@ class P4TopoRunner(object):
         log.info('configuring switches...')
         switch_mappings = []
         for switch in [s for s in net.switches if s.name not in management_switches]:
-            # switch.register_controller(controller_addr)
-
             switch.configure()
             switch_config = switch.get_switch_config()
             p4monitor.add_switch_connection(switch.name, switch_config)

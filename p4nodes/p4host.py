@@ -23,9 +23,6 @@
 
 from mininet.node import Host
 
-import json
-import requests
-
 from tools.log.log import log
 
 
@@ -144,16 +141,6 @@ class P4Host(Host):
 
     def stop_iperf(self):
         self.cmd('pkill -9 iperf')
-
-    def register_controller(self, controller_address):
-        try:
-            response = requests.post(url='http://{}/node'.format(controller_address),
-                                     json=json.dumps(self.host_config))
-            log.info('register host config ({}): {}\n'.format(self.name, response))
-        except requests.exceptions.ConnectionError as ex:
-            log.warn(ex)
-            log.warn('unable to register host config ({})\n'.format(self.name))
-            # raise P4ControllerRegisterException('unable to register host config ({})\n'.format(self.name))
 
     def disable_ipv6(self):
         for intf in [intf_ for intf_ in self.intfs.values()]:

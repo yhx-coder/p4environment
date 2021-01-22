@@ -67,10 +67,8 @@ class SwitchConnection(object):
 
         self.requests_stream.put(request)
 
-        # for response in self.stream_message_response:
-        #     yield response
-
-        return self.stream_message_response
+        for response in self.stream_message_response:
+            return response  # exactly one
 
     def set_forwarding_pipeline_config(self, p4info, bmv2_json_file):
         device_config = self.build_device_config(bmv2_json_file)
