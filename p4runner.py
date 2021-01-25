@@ -202,7 +202,10 @@ class P4TopoRunner(object):
 
 
 def cleanup_on_error():
-    subprocess.call('''mn -c; for link in `ip link | grep @ | cut -d ' ' -f 2 | cut -d @ -f 1`; do 
+    subprocess.call('''mn -c; for link in `ip link | \
+                       grep -e '[h,s]root[h,s]\\?-[h,s]root[h,s]\\?@[h,s]root[h,s]\\?-[h,s]root[h,s]\\?' \
+                       -e 'cpu-s[0-9]*@if[0-9]*' -e 'srooth\\?-[h,s][0-9]*@if[0-9]*' | \
+                       cut -d ' ' -f 2 | cut -d @ -f 1`; do 
                        if [ $link != 'macvtap0' ]; then ip link delete $link; fi; done; 
                        ip link delete sroot; ip link delete srooth''', shell=True)
     subprocess.call("for pid in `ps auxw | grep p4runner.py | awk '{print $2}'`; do kill -9 $pid; done", shell=True)
